@@ -10,20 +10,40 @@
 		/>
 		<meta name="viewport" content="width=device-width" />
 
-		<meta name="author" content="Nato Boram" />
-		<meta name="keywords" content="JTechForums, Lmjtfy" />
+		<title>Let me search JTechForums for you</title>
+		<meta
+			name="description"
+			content="Share a JTechForums search with a friend. They'll get a friendly tutorial showing them how to use the forum's search."
+		/>
+		<meta name="keywords" content="JTechForums, search, kosher tech, Jewish tech, lmsjffy" />
+		<meta name="theme-color" content="#111111" />
 
-		<meta property="og:image" content="images/Lmgtfy.png" />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="JTechForums Search" />
 		<meta property="og:title" content="Let me search JTechForums for you" />
+		<meta
+			property="og:description"
+			content="Share a JTechForums search with a friend. They'll get a friendly tutorial showing them how to use the forum's search."
+		/>
+		<meta
+			property="og:image"
+			content="https://alltechdev.github.io/lmsjffy/jtech-logo-small.png"
+		/>
+		<meta property="og:image:width" content="500" />
+		<meta property="og:image:height" content="500" />
+		<meta property="og:image:alt" content="JTechForums logo" />
+		<meta property="og:url" content="https://alltechdev.github.io/lmsjffy/" />
 
-		<!-- Prevents the white flash on page load -->
-		<script>
-			const brightness = localStorage.getItem('brightness')
-
-			if (brightness === 'light') document.documentElement.classList.remove('dark')
-			else if (brightness === 'dark' || matchMedia('(prefers-color-scheme: dark)').matches)
-				document.documentElement.classList.add('dark')
-		</script>
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:title" content="Let me search JTechForums for you" />
+		<meta
+			name="twitter:description"
+			content="Share a JTechForums search with a friend. They'll get a friendly tutorial showing them how to use the forum's search."
+		/>
+		<meta
+			name="twitter:image"
+			content="https://alltechdev.github.io/lmsjffy/jtech-logo-small.png"
+		/>
 
 		%sveltekit.head%
 	</head>
