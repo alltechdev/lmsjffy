@@ -22,7 +22,7 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm run build
         env:
-          BUILD_BASE: /lmgtfy
+          BUILD_BASE: /lmsjffy
       - uses: actions/upload-pages-artifact@v4
         with:
           path: build
