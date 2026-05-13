@@ -8,16 +8,12 @@
 	<title>Let me search JTechForums for you</title>
 </svelte:head>
 
-<div class="flex h-screen flex-col bg-jtech-secondary text-jtech-primary">
+<div class="flex min-h-screen min-h-[100dvh] flex-col bg-jtech-secondary text-jtech-primary">
 	<Header />
 
-	<div class="grow-[1]" />
-
-	<main class="container mx-auto">
+	<main class="container mx-auto flex flex-1 flex-col items-center justify-center py-8">
 		<slot />
 	</main>
-
-	<div class="grow-[2]" />
 
 	<Footer />
 </div>
