@@ -1,41 +1,32 @@
 {
-	"name": "@natoboram/lmgtfy",
+	"name": "lmsjffy",
 	"version": "0.0.2",
-	"description": "A \"Let Me Google That For You\" clone that's open source and doesn't track you when you share it.",
+	"description": "Let me search JTechForums for you.",
 	"keywords": [
-		"Google",
-		"LMGTFY"
+		"JTechForums",
+		"LMSJFFY"
 	],
-	"homepage": "https://github.com/NatoBoram/lmgtfy",
+	"homepage": "https://github.com/alltechdev/lmsjffy",
 	"bugs": {
-		"url": "https://github.com/NatoBoram/lmgtfy/issues"
+		"url": "https://github.com/alltechdev/lmsjffy/issues"
 	},
 	"license": "AGPL-3.0-or-later",
-	"repository": "github:NatoBoram/lmgtfy",
+	"repository": "github:alltechdev/lmsjffy",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
-		"clean": "rm -rf .svelte-kit build dist docs node_modules tsconfig.tsbuildinfo",
+		"clean": "rm -rf .svelte-kit build node_modules tsconfig.tsbuildinfo",
 		"preview": "vite preview",
-		"test": "pnpm run test:integration && pnpm run test:unit",
-		"test:integration": "playwright test",
-		"test:unit": "vitest --sequence.concurrent",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"test:unit": "vitest --sequence.concurrent",
 		"lint": "prettier --check . && eslint .",
 		"lint:fix": "eslint --fix . && pnpm run format --list-different",
 		"format": "prettier --write .",
-		"docker:build": "docker build --secret id=BUILD_BASE --tag lmgtfy .",
-		"docker:run": "docker run --publish 127.0.0.1:3000:3000 lmgtfy",
-		"docker:kill": "docker ps --format '{{.Image}} {{.ID}}' | grep lmgtfy | awk '{print $2}' | xargs docker kill",
 		"sync": "svelte-kit sync"
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.21.0",
 		"@natoboram/heroicons.svelte": "^1.0.6",
-		"@playwright/test": "^1.55.1",
-		"@sveltejs/adapter-auto": "^3.2.5",
-		"@sveltejs/adapter-node": "^5.2.12",
 		"@sveltejs/adapter-static": "^3.0.10",
 		"@sveltejs/kit": "^2.20.6",
 		"@sveltejs/vite-plugin-svelte": "^3.1.2",

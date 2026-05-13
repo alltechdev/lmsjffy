@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Buttons from '$lib/components/Buttons.svelte'
-	import Google from '$lib/components/Google.svelte'
+	import Logo from '$lib/components/Logo.svelte'
 	import Search from '$lib/components/Search.svelte'
 
 	let f: string
@@ -21,7 +21,7 @@
 	method="GET"
 	role="search"
 >
-	<Google for={f} />
+	<Logo for={f} />
 	<Search id={f} bind:input />
 	<Buttons bind:btnK />
 </form>
