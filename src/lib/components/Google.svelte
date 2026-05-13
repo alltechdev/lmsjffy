@@ -3,14 +3,11 @@
 	export { f as for }
 </script>
 
-<label class="font-['Open_Sans'] text-8xl font-normal" for={f}>
-	<span class="text-blue-500 dark:text-blue-400">L</span><span
-		class="text-red-500 dark:text-red-400">m</span
-	><span class="text-amber-500 dark:text-amber-400">g</span><span
-		class="text-blue-500 dark:text-blue-400">t</span
-	><span class="text-green-500 dark:text-green-400">f</span><span
-		class="text-red-500 dark:text-red-400">y</span
-	>
-</label>
-
-<label for={f}><small>Let me Google that for you</small></label>
+<div class="flex flex-col items-center gap-3">
+	<a href="https://forums.jtechforums.org/" aria-label="JTech Forums">
+		<img src="/jtech-logo.png" alt="JTech Forums" class="h-20 w-auto invert" />
+	</a>
+	<label for={f}>
+		<small class="text-sm text-zinc-400">Let me search JTech Forums for you</small>
+	</label>
+</div>

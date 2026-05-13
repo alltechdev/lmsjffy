@@ -5,6 +5,6 @@ import Header from './Header.svelte'
 test('Header', ({ expect }) => {
 	render(Header)
 
-	const button = screen.getByRole<HTMLButtonElement>('button')
-	expect(button).toBeDefined()
+	const img = screen.getByRole<HTMLImageElement>('img')
+	expect(img).toBeDefined()
 })

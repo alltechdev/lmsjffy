@@ -10,7 +10,6 @@
 	export { className as class }
 
 	export let action: string
-	export let btnI: HTMLInputElement | undefined = undefined
 	export let btnK: HTMLInputElement | undefined = undefined
 	export let input: HTMLInputElement | undefined = undefined
 </script>
@@ -24,5 +23,5 @@
 >
 	<Google for={f} />
 	<Search id={f} bind:input />
-	<Buttons bind:btnK bind:btnI />
+	<Buttons bind:btnK />
 </form>

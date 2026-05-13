@@ -1,25 +1,15 @@
 <script lang="ts">
-	export let btnI: HTMLInputElement | undefined = undefined
 	export let btnK: HTMLInputElement | undefined = undefined
 </script>
 
-<div class="flex flex-row gap-4 align-middle">
+<div class="flex flex-row gap-3 align-middle">
 	<input
 		bind:this={btnK}
-		aria-label="Google Search"
-		class="rounded border border-transparent bg-zinc-100 px-4 py-2 dark:bg-zinc-700 hover:dark:border-zinc-500"
+		aria-label="Search JTech Forums"
+		class="cursor-pointer rounded-md border border-transparent bg-jtech-tertiary px-5 py-2.5 font-semibold text-white shadow-sm transition hover:bg-jtech-tertiary-hover focus:outline-none focus:ring-2 focus:ring-jtech-tertiary focus:ring-offset-2 focus:ring-offset-jtech-secondary"
 		name="btnK"
 		tabindex="0"
 		type="submit"
-		value="Google Search"
-	/>
-
-	<input
-		bind:this={btnI}
-		aria-label="I'm Feeling Lucky"
-		class="rounded border border-transparent bg-zinc-100 px-4 py-2 dark:bg-zinc-700 hover:dark:border-zinc-500"
-		name="btnI"
-		type="submit"
-		value="I'm Feeling Lucky"
+		value="Search JTech Forums"
 	/>
 </div>

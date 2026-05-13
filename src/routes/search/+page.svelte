@@ -11,12 +11,9 @@
 	onMount(async () => {
 		await new Promise(resolve => requestIdleCallback(resolve))
 
-		const btnI = $page.url.searchParams.get('btnI')
-		const btnK = $page.url.searchParams.get('btnK')
 		const q = $page.url.searchParams.get('q')
-		const btn = btnK ? search : btnI ? lucky : undefined
-		if (!q || !btn) return goto('/')
-		button = btn
+		if (!q) return goto('/')
+		button = search
 
 		await move(cursor, input)
 		input.focus()
@@ -80,7 +77,6 @@
 	let button: HTMLInputElement
 	let cursor: HTMLDivElement
 	let input: HTMLInputElement
-	let lucky: HTMLInputElement
 	let search: HTMLInputElement
 	let step = 0
 </script>
@@ -92,21 +88,24 @@
 <div class="flex w-full flex-col items-center gap-4">
 	<Form
 		class="w-full"
-		action="https://google.com/search"
-		bind:btnI={lucky}
+		action="https://forums.jtechforums.org/search"
 		bind:btnK={search}
 		bind:input
 		for="input"
 	/>
 
 	{#if step === 0}
-		<Step1 class="w-full max-w-xl rounded bg-blue-100 p-4 text-blue-800 dark:bg-blue-200" />
+		<Step1
+			class="w-full max-w-xl rounded-md border-l-4 border-jtech-tertiary bg-jtech-tertiary-low/40 p-4 text-jtech-primary"
+		/>
 	{:else if step === 1}
 		<Step2
 			{button}
-			class="w-full max-w-xl rounded bg-blue-100 p-4 text-blue-800 dark:bg-blue-200"
+			class="w-full max-w-xl rounded-md border-l-4 border-jtech-tertiary bg-jtech-tertiary-low/40 p-4 text-jtech-primary"
 		/>
 	{:else if step === 2}
-		<Step3 class="w-full max-w-xl rounded bg-green-100 p-4 text-green-800 dark:bg-green-200" />
+		<Step3
+			class="w-full max-w-xl rounded-md border-l-4 border-jtech-success bg-jtech-success/20 p-4 text-jtech-primary"
+		/>
 	{/if}
 </div>

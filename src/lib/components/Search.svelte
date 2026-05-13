@@ -7,19 +7,11 @@
 </script>
 
 <div
-	class="flex w-full max-w-xl flex-row items-center gap-4 rounded-full border border-zinc-200 p-2
-			focus-within:border-transparent
-			focus-within:shadow-md
-			hover:border-transparent
-			hover:shadow-md
-			dark:border-zinc-500
-			focus-within:dark:border-transparent
-			focus-within:dark:bg-zinc-700
-			hover:dark:border-transparent
-			hover:dark:bg-zinc-700
-		"
+	class="flex w-full max-w-xl flex-row items-center gap-2 rounded-md border border-zinc-700 bg-jtech-secondary px-3 py-2 text-jtech-primary transition focus-within:border-jtech-tertiary focus-within:ring-1 focus-within:ring-jtech-tertiary hover:border-zinc-500"
 >
-	<MagnifyingGlass />
+	<div class="text-zinc-400">
+		<MagnifyingGlass />
+	</div>
 	<input
 		{id}
 		aria-label="Search"
@@ -28,9 +20,10 @@
 		autocorrect="off"
 		bind:this={input}
 		bind:value
-		class="w-full bg-transparent outline-none"
+		class="w-full bg-transparent text-jtech-primary outline-none placeholder:text-zinc-500"
 		maxlength="2048"
 		name="q"
+		placeholder="Search"
 		spellcheck="false"
 		title="Search"
 		type="text"

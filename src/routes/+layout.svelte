@@ -5,10 +5,10 @@
 </script>
 
 <svelte:head>
-	<title>Let me Google that for you</title>
+	<title>Let me search JTechForums for you</title>
 </svelte:head>
 
-<div class="flex h-screen flex-col text-zinc-900 dark:text-zinc-50">
+<div class="flex h-screen flex-col bg-jtech-secondary text-jtech-primary">
 	<Header />
 
 	<div class="grow-[1]" />
