@@ -6,8 +6,9 @@
 </script>
 
 <div class="flex flex-col items-center gap-3">
-	<a href="https://forums.jtechforums.org/" aria-label="JTech Forums">
-		<img src="{base}/jtech-logo.png" alt="JTech Forums" class="h-20 w-auto invert" />
+	<a href="https://forums.jtechforums.org/" aria-label="JTech Forums" class="flex flex-col items-center gap-3">
+		<img src="{base}/jtech-logo-small.png" alt="" class="h-24 w-24" />
+		<img src="{base}/jtech-logo.png" alt="JTech Forums" class="h-14 w-auto invert" />
 	</a>
 	<label for={f}>
 		<small class="text-sm text-zinc-400">Let me search JTech Forums for you</small>
